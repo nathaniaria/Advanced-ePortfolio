@@ -8,33 +8,40 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("mrQIKHUuvuFb_onWJ");
+        })();
+    </script>
+
 </head>
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/logo.svg" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class=
                     "nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class=
+                    <a href="#projects" class=
                     "nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black">Projects</a>
                 </li>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class=
                     "nav__link--anchor
                     link__hover--effect
                     link__hover--effect--black">Contact</a>
                 </li>
-                <li class="nav__link click">
+                <li class="nav__link click" onclick="toggleContrast()">
                     <a href="#" class=
                     "nav__link--anchor
                     link__hover--effect
@@ -48,7 +55,7 @@
                 <h1 class="title orange">I'm Nathan</h1>
                 <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences.
                 <br>
-                Here's a bit more <b class="orange"> about me.</b> 
+                Here's a bit more <b class="orange click"  onclick="toggleModal()"> about me.</b> 
                 </p>
                 <div class="social__list">
                     <a href="#" class="social__link click">
@@ -63,24 +70,89 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
-        <!-- <div class="modal">
+        <div class="modal">
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-                <h4 class="modal__sub-title modal__sub-title--about"></h4>
-                <p class="modal__para">I'm a 25 year-old</p>
+                <h4 class="modal__sub-title modal__sub-title--about"> Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a 25 year-old <b class="orange">frontend software engineer</b> with a strong passion for developing websites with great <b class="orange">user experiences.</b>
+                    <br>
+                    I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most <b class="orange">talented</b> and <b class="orange">experienced</b> software engineers every day.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                    <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                    <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                    <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                    <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                    <span class="language__name">React</span>
+                    </figure>
+                </div>
             </div>
-            <div class="modal__half modal__contact">Let's have a chat!</div> -->
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently looking for new oppurtunities and look forward from hearing from you.
+                </h4>
+                <form action="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" name="user_name" type="text" ></input>
+                    </div>
+                    
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" name="user_email" type="email" ></input>
+                    </div>
+                    
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message" type="text" ></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send me your message
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message, looking forward to speaking to you soon.
+                </div>
+            </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/triangle.svg" class="shape shape--3">
+        <img src="./assets/circle.svg" class="shape shape--4">
+        <img src="./assets/semi circle.svg" class="shape shape--5">
+        <img src="./assets/circle.svg" class="shape shape--6">
+        <img src="./assets/triangle.svg" class="shape shape--7">
+        <img src="./assets/squiggly.svg" class="shape shape--8">
     </section>
 
 
-    <section id="projects">
+    <section id="projects" onmousemove="moveBackground(event)">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
@@ -161,17 +233,14 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer onmousemove="moveBackground(event)">
         <div class="container">
         <div class="footer__row">
-
-
-
             <figure>
             <img class="footer__logo--img" src="./assets/logo.svg" alt="">
             </figure>
                 <div class="footer__social--list">
-                    <a href="#" class=
+                    <a href="https://github.com/nathaniaria" class=
                     "footer__social--link
                     link__hover--effect
                     link__hover--effect--white
@@ -181,12 +250,12 @@
                     link__hover--effect
                     link__hover--effect--white
                     "> LinkedIn</a>
-                    <a href="#" class=
+                    <a href="#" onclick="toggleModal()" class=
                     "footer__social--link
                     link__hover--effect
                     link__hover--effect--white
                     "> Contact</a>
-                    <a href="#" class=
+                    <a href="./assets/David Bragg Resume.pdf" target="_blank" class=
                     "footer__social--link
                     link__hover--effect
                     link__hover--effect--white
