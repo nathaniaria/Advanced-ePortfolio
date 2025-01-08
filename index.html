@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NISD - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -52,10 +52,10 @@
         <header class="header">
             <div class="header__content">
                 <h1 class="title">Hey</h1>
-                <h1 class="title orange">I'm Nathan</h1>
-                <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences.
+                <h1 class="title purple">I'm Nathan</h1>
+                <p class="header__para">I'm a <b class="purple">Frontend Software Engineer</b> with a strong passion for building web applications with great user experiences.
                 <br>
-                Here's a bit more <b class="orange click"  onclick="toggleModal()"> about me.</b> 
+                Here's a bit more <b class="purple click"  onclick="toggleModal()"> about me.</b> 
                 </p>
                 <div class="social__list">
                     <a href="#" class="social__link click">
@@ -82,7 +82,7 @@
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
                 <h4 class="modal__sub-title modal__sub-title--about"> Frontend Software Engineer</h4>
-                <p class="modal__para">I'm a 25 year-old <b class="orange">frontend software engineer</b> with a strong passion for developing websites with great <b class="orange">user experiences.</b>
+                <p class="modal__para">I'm a 27 year-old <b class="orange">frontend software engineer</b> with a strong passion for developing websites with great <b class="orange">user experiences.</b>
                     <br>
                     I am currently working on extremely difficult engineering problems and learn from a team consisting of some of the most <b class="orange">talented</b> and <b class="orange">experienced</b> software engineers every day.
                 </p>
@@ -151,29 +151,79 @@
         <img src="./assets/squiggly.svg" class="shape shape--8">
     </section>
 
+    <section id="techstack" onmousemove="moveBackground(event)">
+        <div class="container" >
+            <div class="row">
+                <h2 class="section__title">
+                    Here are some of the technologies I've been working with recently:
+                </h2>
+                <ul class="techstack__list">
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/html5-40-1175193.png" alt="">
+                        <span class="techstack__item--name">HTML</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="techstack__item--name">CSS</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="techstack__item--name">JavaScript</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="techstack__item--name">React</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" alt="">
+                        <span class="techstack__item--name">Node.js</span>
+                    </li>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-512/free-firebase-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-3-pack-logos-icons-2944871.png?f=webp&w=256"
+                            alt="">
+                        <span class="techstack__item--name">Firebase</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/stripe-3521465-2944890.png" alt="">
+                        <span class="techstack__item--name">Stripe</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-256/next-js-1175001.png" alt="">
+                        <span class="techstack__item--name">Next.js</span>
+                    </li>
+                    <li class="techstack__item">
+                        <img class="textstack__img" src="https://cdn.iconscout.com/icon/free/png-512/free-tailwind-css-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-4406745.png?f=webp&w=256" alt="">
+                        <span class="techstack__item--name">Tailwind CSS</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 
     <section id="projects" onmousemove="moveBackground(event)">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
-                    Here are some of my <span class="orange">projects.</span>
+                    Here are some of my <span class="purple">projects.</span>
                 </h1>
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="./assets/netflix.png " class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                                 <div class="project__description">
                                     <h3 class="project__description--title">
-                                        Car Sales Project
+                                        Netflix Clone
                                     </h3>
                                     <h4 class="project__description--sub--title">
-                                        Html, CSS, JavaScript, React
+                                        Html, Tailwind-CSS, JavaScript, Next.js, Firebase, Stripe, Google Auth 
                                     </h4>
                                     <p class="project__description--para">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia ea nostrum incidunt exercitationem distinctio laudantium officiis molestias quos quas ullam est reprehenderit qui labore, accusantium doloribus. Provident voluptatum a nihil consequatur deleniti distinctio itaque consectetur consequuntur nam, magnam quam.
+                                        I have developed a dynamic Netflix clone using HTML, Tailwind CSS, JavaScript, Next.js, Firebase, Stripe, and Google Auth. This project showcases my proficiency in creating a visually appealing and functional web application that replicates the popular streaming platform's functionalities. With a sleek user interface, seamless page transitions, real-time data storage, user authentication, and integrated payment processing, the Netflix clone delivers an immersive and enjoyable streaming experience for users.
                                     </p>
-                                    <div class="project__description--links">
+                                        <div class="project__description--links">
                                         <a href="#" class="project__description--link">
                                             <i class="fab fa-github"></i>
                                         <a href="#" class="project__description--link">
@@ -184,7 +234,7 @@
                         </div>
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/blinker mockup.png" class="project__img" alt="">
+                            <img src="./assets/library.png class="project__img" alt="">
                             <div class="project__wrapper--bg"></div>
                                 <div class="project__description">
                                     <h3 class="project__description--title">

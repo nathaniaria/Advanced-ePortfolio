@@ -12,8 +12,14 @@ html {
 }
 
 section {
-    background: linear-gradient( #676867, #ffffff);
+    background: rgb(204, 201, 201);
     transition: all 500ms ease;
+}
+
+
+
+.purple {
+    color: #6b21a8;
 }
 
 
@@ -216,7 +222,7 @@ nav,
 }
 
 .social__link {
-    background-color: #f06449;
+    background-color: #6b21a8;
     color: white;
     padding: 6px;
     width: 32px;
@@ -514,10 +520,45 @@ nav {
     z-index: 100;
 }
 
-/* 
+
+
+ /* 
+        TECHSTACK
+
+ */
+
+ 
+
+ .techstack__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+        
+ }
+
+ .techstack__item {
+        width: 33%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 36px;
+ }
+
+ .textstack__img {
+        width: 60px;
+        height: 60px;
+        margin-right: 12px;;
+ }
+
+
+ /* 
     
     PROJECTS
  */
+
 
 
 .project {
@@ -726,6 +767,9 @@ SHAPES
     }
     .project__description--para {
         display: none;
+    }
+    .techstack__item--name {
+    display: none;
     }
     .project__description {
         left: 0;
